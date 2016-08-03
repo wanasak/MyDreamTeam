@@ -1,0 +1,16 @@
+﻿@model MyDreamTeam.Web.ViewModels.FootballerViewModel
+
+<div class="panel-body">
+    <div class="media">
+        <a class="pull-left" href="@Url.Action("Detail", "Home", new { footballerID = Model.FootballerID })">
+            <img class="media-object img-responsive img-circle" src="@Url.Content("../../Images/" + Model.Image)" />
+        </a>
+        <div class="media-body">
+            <h3 class="media-heading">
+                @Model.FirstName @Model.LastName
+            </h3>
+            <p>Club: @Model.Club.Name</p>
+            <p>Price: @Model.Price.ToString("C")</p>
+        </div>
+    </div>
+</div>

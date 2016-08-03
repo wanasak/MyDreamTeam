@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MyDreamTeam.Web.ViewModels.FootballerViewModel>
+
+@{
+    ViewBag.Title = "Filter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container"">
+    <div class="jumbotron">
+        @foreach (var item in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    @Html.Label(item.FirstName + " " + item.LastName)
+                </div>
+                @Html.Partial("_Footballer", item)
+            </div>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/bootstrap/css")
+</head>
+<body>
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("My Dream Team", "Index", "Home", new { }, new { @class = "navbar-brand" })
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    @Html.ActionLink("Goal Keepers", "Index", "Home", new { position = "Goal Keeper" }, null)
+                </li>
+                <li class="active">
+                    @Html.ActionLink("Defender", "Index", "Home", new { position = "Defender" }, null)
+                </li>
+                <li class="active">
+                    @Html.ActionLink("Midfielder", "Index", "Home", new { position = "Midfielder" }, null)
+                </li>
+                <li class="active">
+                    @Html.ActionLink("Attacker", "Index", "Home", new { position = "Attacker" }, null)
+                </li>
+            </ul>
+        </div>
+    </nav>
+    @RenderBody()
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    @Scripts.Render("~/bootstrap/js")
+</body>
+</html>
