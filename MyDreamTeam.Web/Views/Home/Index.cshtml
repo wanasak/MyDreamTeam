@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
+<div class="container" style="margin-top: 60px;">
     @foreach (var item in Model)
     {
         <br />
@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="ClubID">Club: </label>
-                        @Html.DropDownList("ClubID", null, "Select club", htmlAttributes: new { @class = "form-control" })
+                        @Html.DropDownList("ClubID", null, "-- Select club --", htmlAttributes: new { @class = "form-control" })
                     </div>
                     <button type="submit" class="btn btn-success">Upload</button>
                 }
